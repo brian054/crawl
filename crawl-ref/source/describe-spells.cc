@@ -125,12 +125,6 @@ static string _booktype_header(mon_spell_slot_flag type,
                         vulnerabilities.c_str());
 }
 
-static bool _spell_in_book(spell_type spell, const vector<mon_spell_slot> &book)
-{
-    return any_of(book.begin(), book.end(),
-                  [=](mon_spell_slot slot){return slot.spell == spell;});
-}
-
 /**
  * Append all spells of a given type that a given monster may know to the
  * provided vector.
